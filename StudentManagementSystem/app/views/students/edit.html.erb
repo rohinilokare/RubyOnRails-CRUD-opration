@@ -1,0 +1,27 @@
+<h1>Edit student record</h1>
+<%= form_with(model: @student, local: true) do |form| %>
+  <p>
+    <%= form.label :roll_no %><br>
+    <%= form.text_field :roll_no %>
+  </p>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </p>
+
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+
+  <p>
+    <%= form.label :standard %><br>
+    <%= form.text_area :standard %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', students_path %>
